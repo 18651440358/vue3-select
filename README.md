@@ -11,7 +11,7 @@
 因为下拉框可能会在某些情况下被挡住, 所以这里的下拉框被挂载到了`body`标签上, 并且下拉框中的选项往往是以`<slot>`插槽的形式编写, 这里就会困扰到很多小白, 搞不明白怎么样才能在 `下拉框` 与`触发下拉按钮` 之间关联响应式事件与数据.
 
 ### 组件的使用
-```html
+```vue
 <tk-select selected="请选择">
     <template #selectDropDown>
         <tk-select-item value="最新案例">最新案例</tk-select-item>
@@ -50,7 +50,7 @@
 
 > `注意:` 这里的 `v-modal` 并没有做成双向绑定, 这里只用于获取到 `select` 中选中的值, 只能用于获取, 主动修改其值并无效果, 并且不支持 `v-model` 修饰符
 
-```html
+```vue
 <tk-select v-model="selectValue">
     ...
 </tk-select>
@@ -108,7 +108,7 @@ export default {
 
 #### select.vue 文件是我们的父组件
 `vue3` 新增 `<teleport>` 标签, 可以将标签内的元素挂载到任意位置, [查看官方文档](https://v3.vuejs.org/guide/teleport.html)
-```html
+```vue
 // teleport 用法
 // 将<h1>挂载到body上
 
@@ -119,7 +119,7 @@ export default {
 
 `select` 主要有触发下拉按钮`tk-select-button`和下拉列表`tk-select-dropdown`组成, 下拉框中的选项未来将由插槽插入.
 
-```html
+```vue
 <!-- select.vue -->
 <template>
   <!-- 下拉框 -->
@@ -216,7 +216,7 @@ export default {
 }
 ```
 #### 让我们继续看看select-item.vue , 这是我们的子组件
-```html
+```vue
 <!-- select-item.vue -->
 <template>
   <li class="tk-select-item" :class="{'active':active}" @click="chooseSelectItem">
@@ -239,7 +239,7 @@ export default {
 </script>
 ```
 在 `select.vue` 中接收事件
-```html
+```js
 setup(){
     // 选中内容
     const selctValue = ref('');
@@ -347,7 +347,7 @@ onMounted(()=>{
 
 #### 全部代码
 #### select.vue
-```html
+```vue
 <template>
   <!-- 下拉框 -->
   <div class="tk-select"> 
@@ -554,7 +554,7 @@ export default {
 ```
 
 #### select-item.vue
-```html
+```vue
 <template>
   <li class="tk-select-item" :class="{'active':active}" @click="chooseSelectItem">
       <slot></slot>
