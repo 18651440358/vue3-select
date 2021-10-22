@@ -5,12 +5,12 @@
 
 <br><br>
 
-本人学生 🐶, 平时在外面没事接点小项目小赚一笔补贴生活费. 之前一直都是使用`Vue2.x`的版本做项目, 暑假刚刚学习了`Vue3`想着新项目就直接用`Vue3`上手.
+> 本人学生 🐶, 平时在外面没事接点小项目小赚一笔补贴生活费. 之前一直都是使用`Vue2.x`的版本做项目, 暑假刚刚学习了`Vue3`想着新项目就直接用`Vue3`上手.
 
 ### 效果展示
 好了, 话不多说先给大佬们看看效果样式:
 
-![bs470-ngit5.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a0084e64b4b945bf87b321adcac5337b~tplv-k3u1fbpfcp-watermark.image?)
+![效果.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a0084e64b4b945bf87b321adcac5337b~tplv-k3u1fbpfcp-watermark.image?)
 
 ### 组件难点
 因为下拉框可能会在某些情况下被挡住, 所以这里的下拉框被挂载到了`body`标签上, 并且下拉框中的选项往往是以`<slot>`插槽的形式编写, 这里就会困扰到很多小白, 搞不明白怎么样才能在 `下拉框` 与`触发下拉按钮` 之间关联响应式事件与数据.
