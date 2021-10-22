@@ -265,7 +265,7 @@ setup(){
 在`vue2`中我们通常获取实例的parent然后一层一层寻找父类`select`, 但是在 `vue3` setup中并不能获取到正确的parent, 所以我想到了可以在 `select` 创建时派发一个 `token` 在讲此令牌传给所有子类, 好了理论存在, 开始实践.
 
 #### provide & inject
-在vue中使用`provide`可以像子类、孙类等等后代传输数据, 后代使用`inject`接收数据.[查看官网](https://v3.vuejs.org/guide/component-provide-inject.html#provide-inject)
+在vue中使用`provide`可以向子类、孙类等等后代传输数据, 后代使用`inject`接收数据.[查看官网](https://v3.vuejs.org/guide/component-provide-inject.html#provide-inject)
 
 ![components_provide.png](https://github.com/18651440358/vue3-select/blob/main/public/components_provide.png)
 
